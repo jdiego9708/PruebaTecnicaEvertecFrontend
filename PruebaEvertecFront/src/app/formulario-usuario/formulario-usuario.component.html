@@ -1,0 +1,49 @@
+<div class="container formulario">
+  <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()">
+    <mat-form-field class="ng-untouched">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field class="ng-untouched">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="apellido" required>
+    </mat-form-field>
+
+    <mat-form-field class="ng-untouched">
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <!--<mat-form-field appearance="fill">
+            <mat-label>Foto de Usuario</mat-label>
+            <input type="file" formControlName="fotoUsuario" accept="image/*">
+          </mat-form-field>-->
+
+    <mat-form-field class="ng-untouched">
+      <mat-label>Foto de usuario</mat-label>
+      <input type="file" name="fotoUsuario" (change)="onFileSelected($event)" #fileInput>
+      <input matInput [value]="fileInput.files[0]?.name" placeholder="Seleccionar archivo" readonly>
+    </mat-form-field>
+
+
+    <mat-form-field class="ng-untouched">
+      <mat-label>Estado civil</mat-label>
+      <mat-select formControlName="estadoCivil" required>
+        <mat-option *ngFor="let estado of estadosCiviles" [value]="estado.valor">
+          {{ estado.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--<mat-checkbox formControlName="tieneHermanos">¿Tiene hermanos?</mat-checkbox>-->
+
+
+
+
+    <button mat-raised-button color="primary"type="submit" [disabled]="miFormulario.invalid">Enviar</button>
+  </form>
+
+</div>

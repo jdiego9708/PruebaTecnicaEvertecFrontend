@@ -1,0 +1,18 @@
+<div class="container formulario">
+    <div class="title-container">
+        <h1 class="title">Inicio de sesión para la prueba técnica Evertec</h1>
+      </div>
+    <form (submit)="onSubmit(loginForm)" #loginForm="ngForm">     
+        <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <input matInput name="usuario" [(ngModel)]="usuario" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput name="password" [(ngModel)]="password" type="password" required>
+        </mat-form-field>
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit">Iniciar sesión</button>
+        </div>
+    </form>
+</div>

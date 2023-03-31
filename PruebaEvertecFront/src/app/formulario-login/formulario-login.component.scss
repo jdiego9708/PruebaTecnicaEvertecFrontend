@@ -1,0 +1,76 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form {
+    max-width: 500px;
+    margin: auto;
+  }
+  mat-form-field {
+    display: block;
+    margin-bottom: 40px;
+  }
+  mat-label {
+    font-size: 20px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .formulario {
+    background-image: url('https://siswalletarchivos.blob.core.windows.net/imagenesusuario/wallpaperuno.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .formulario form {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+  }
+  
+  .formulario label {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .formulario mat-form-field {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .formulario .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .formulario button {
+    width: 200px;
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .title-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 0px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
